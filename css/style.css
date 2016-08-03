@@ -41,7 +41,7 @@ h2, h1, button {
 }
 
 button, input, #search-term {
-  box-shadow: 3px 3px 1px LightGray;
+  box-shadow: 0 0 5px 2px gray;
 }
 
 button:hover {
@@ -65,7 +65,7 @@ button:hover {
 .container {
   display:flex;
   height:45rem;
-  width:100rem;
+  width:85rem;
 }
 .results > h2 {
   height:20%;
