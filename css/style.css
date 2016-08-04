@@ -75,6 +75,10 @@ button:hover {
 }
 
 .results-images {
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   height:80%;
   width:100%;
+
 }
