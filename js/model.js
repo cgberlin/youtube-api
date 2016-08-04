@@ -19,7 +19,7 @@ function getRequest(searchTerm){
     key: 'AIzaSyCopYLZUaCqeMPYr-BixFT9ZHQHBLNRbno',
     q: searchTerm
   };
-  url = 'https://www.googleapis.com/youtube/v3/search';
+  url = 'https://www.googleapis.com/youtube/v3/search?pageToken='+pageToken;
 
   $.getJSON(url, params, function(data){
     var resultArray = data.items;
@@ -49,7 +49,5 @@ $('.next-page-buttons').on('click', 'button', function(){
 })
 function loadNextFive(pageToken){
   var searchTerm = $('#query').val();
-  searchTerm += ('&pageToken='+pageToken);
-  alert(searchTerm);
   getRequest(searchTerm);
 }
