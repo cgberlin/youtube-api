@@ -1,3 +1,6 @@
+
+var pageToken = '';
+
 $(function(){
   $('#search-term').submit(function(event){
     event.preventDefault();
@@ -21,6 +24,8 @@ function getRequest(searchTerm){
   $.getJSON(url, params, function(data){
     var resultArray = data.items;
     console.log(resultArray);
+    pageToken = data.nextPageToken;
+    console.log(pageToken);
     processResultArray(resultArray);
   });
 }
@@ -28,10 +33,23 @@ function getRequest(searchTerm){
 function processResultArray(resultArray) {
   $.each(resultArray, function(index,video){
     var thumbnail = video.snippet.thumbnails.high.url;
-    showImages(thumbnail);
+    var id = video.id.videoId;
+    var title = video.snippet.title;
+    showImages(thumbnail, id, title);
   });
 }
 
-function showImages(thumbnail){
-  $('.results-images').append('<p><img src = "' + thumbnail + '"></img></p>');
+function showImages(thumbnail, id, title){
+  $('.results-images').append('<div class = "videoImgContain"<h2>'+title+'</h2><a class="various fancybox" href="https://www.youtube.com/embed/'+id+'?autoplay=1"><p><img src = "' + thumbnail +
+   '"></img></p></div>');
+}
+
+$('.next-page-buttons').on('click', 'button', function(){
+  loadNextFive(pageToken);
+})
+function loadNextFive(pageToken){
+  var searchTerm = $('#query').val();
+  searchTerm += ('&pageToken='+pageToken);
+  alert(searchTerm);
+  getRequest(searchTerm);
 }

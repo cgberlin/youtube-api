@@ -1,10 +1,6 @@
 
 *{
   box-sizing: border-box;
-}
-
-
-h2, h1, button {
   font-family: 'Carrois Gothic', sans-serif;
   font-weight:bold;
 }
@@ -41,7 +37,7 @@ h2, h1, button {
 }
 
 button, input, #search-term {
-  box-shadow: 0 0 5px 2px gray;
+  box-shadow: 0 0 5px 2px #cc181e;
 }
 
 button:hover {
@@ -54,7 +50,7 @@ button:hover {
   text-decoration: underline;
 }
 
-.results {
+.results, .videoImgContain {
   width:80%;
   height:100%;
   display:flex;
@@ -76,9 +72,30 @@ button:hover {
 
 .results-images {
   display:flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   height:80%;
   width:100%;
+  font-size:1.6rem;
+  text-align: center;
+}
 
+.results-images img:hover {
+  cursor:pointer;
+  box-shadow: 10px 10px 5px #cc181e;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.next-page-buttons {
+  display:flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content:space-between;;
+  margin-top: auto;
+}
+
+.next-page-buttons button {
+  padding:1rem;
 }
