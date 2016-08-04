@@ -12,11 +12,9 @@
 .title-head, .search-bar-container, .results, .videoImgContain, .next-page-buttons {
   align-items: center;
 }
-
-.title-head, .search-bar-container, .results-images {
+.title-head, .results-images {
   justify-content: center;
 }
-
 .title-head {
   height:10rem;
   background-color: #cc181e;
@@ -24,22 +22,17 @@
   color:white;
   font-size:2rem;
 }
-
 .search-bar-container {
   flex-flow: column;
   float:left;
   border-right: 1px solid LightGray;
   width:20%;
   height:100%;
-
 }
-
 #search-term {
   flex-flow:column;
   padding:2rem;
-
 }
-
 button, input, #search-term {
   box-shadow: 0 0 5px 2px #cc181e;
 }
@@ -49,17 +42,14 @@ button:hover {
   color:white;
   cursor:pointer;
 }
-
 .search-bar-container > h2 {
   text-decoration: underline;
 }
-
 .results, .videoImgContain {
   width:80%;
   height:100%;
   flex-flow: column;
 }
-
 .container {
   height:45rem;
   width:85rem;
@@ -68,9 +58,7 @@ button:hover {
   height:20%;
   font-size: 3rem;
   text-decoration: underline;
-
 }
-
 .results-images {
   flex-wrap: wrap;
   height:80%;
@@ -89,8 +77,8 @@ button:hover {
 
 .next-page-buttons {
   flex-flow: row;
-  justify-content:space-between;;
   margin-top: auto;
+  height:60%;
 }
 
 .next-page-buttons button {
