@@ -48,7 +48,9 @@ $('.next-page-buttons').on('click', 'button', function(){
   loadNextFive(pageToken);
 })
 function loadNextFive(pageToken){
-  $('.results-images').replaceWith('<div class = "results-images"></div>')
-  var searchTerm = $('#query').val();
-  getRequest(searchTerm);
+  $('.results-images').slideUp('slow', function(){
+    $('.results-images').replaceWith('<div class = "results-images"></div>');
+    var searchTerm = $('#query').val();
+    getRequest(searchTerm);
+  });
 }

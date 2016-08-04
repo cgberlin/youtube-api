@@ -4,11 +4,9 @@
   font-family: 'Carrois Gothic', sans-serif;
   font-weight:bold;
 }
-
 .title-head, .search-bar-container, .container, .results-images, .next-page-buttons, #search-term, .results, .videoImgContain {
   display:flex;
 }
-
 .title-head, .search-bar-container, .results, .videoImgContain, .next-page-buttons {
   align-items: center;
 }
@@ -36,7 +34,6 @@
 button, input, #search-term {
   box-shadow: 0 0 5px 2px #cc181e;
 }
-
 button:hover {
   background-color:#cc181e;
   color:white;
@@ -66,7 +63,6 @@ button:hover {
   font-size:1.6rem;
   text-align: center;
 }
-
 .results-images img:hover {
   cursor:pointer;
   box-shadow: 10px 10px 5px #cc181e;
@@ -74,13 +70,11 @@ button:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
-
 .next-page-buttons {
   flex-flow: row;
   margin-top: auto;
   height:60%;
 }
-
 .next-page-buttons button {
   padding:1rem;
 }
